@@ -1,0 +1,1872 @@
+[
+  {
+    "num": 1,
+    "question": "You have been tasked with analyzing a year's worth of sales data stored in an Autonomous Data Warehouse instance. Which tool would you use to automate data exploration and create pivot tables?",
+    "options": [
+      "A. APEX",
+      "B. Business Models",
+      "C. Data Load",
+      "D. SQL Developer Web"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "Business Models in Database Actions automates data exploration and pivot table creation in ADW."
+  },
+  {
+    "num": 2,
+    "question": "Which three advanced options can you enable or disable while creating a business model? (Choose three)",
+    "options": [
+      "A. Autonomous Aggregate Cache",
+      "B. Analytic View Transparency Views",
+      "C. Business Object Security Feature",
+      "D. Analytic View Base Table Query Transformation",
+      "E. Display Private Tables"
+    ],
+    "answer": "ABD",
+    "multi": true,
+    "explanation": "The three advanced options are: Autonomous Aggregate Cache, Analytic View Transparency Views, and Analytic View Base Table Query Transformation."
+  },
+  {
+    "num": 3,
+    "question": "Which statement is true about the use of Access Control Lists (ACLs) with an Autonomous Database on Shared Infrastructure?",
+    "options": [
+      "A. When you restore a database, the existing ACLs are not overwritten by the restore action.",
+      "B. An ACL can be set up for an IP address or a VCN but not for both at the same time.",
+      "C. ACLs can only be used with private endpoints.",
+      "D. An ACL can only be set during the creation of an Autonomous Database on Shared Infrastructure."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "ACLs are preserved during a restore \u2014 the restore action does not overwrite existing ACL settings."
+  },
+  {
+    "num": 4,
+    "question": "Which two statements are true about using an Oracle Autonomous Database with private endpoints? (Choose two)",
+    "options": [
+      "A. Private endpoints can be configured when you clone an ADB on Shared Infrastructure that was initially created with public endpoints.",
+      "B. A Network Security Group (NSG) is required within your VCN before you can provision a Shared ADB to use private endpoints.",
+      "C. You can configure private endpoints for an Always Free Autonomous Database.",
+      "D. An ADB with private endpoints can be accessed from the public Internet by adding your IP address to an ACL."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "You can configure private endpoints during cloning even if the source used public endpoints, and an NSG is required before provisioning with private endpoints."
+  },
+  {
+    "num": 5,
+    "question": "Your customer has upgraded their on-premises 11.2 Database to 12.2 and migrated to a PDB. How should the customer unplug their database to migrate to an Autonomous Database?",
+    "options": [
+      "A. Create a database link from the source database to the ADB environment and clone the PDB.",
+      "B. Unplug into an XML file so that the database and XML files can be uploaded to Object Storage.",
+      "C. PDBs cannot be migrated to an Autonomous Database using plug, unplug, or clone.",
+      "D. Unplug into a PDB archive, which can be uploaded to Object Storage."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "PDBs cannot be migrated to Autonomous Database using plug/unplug/clone operations. Use Data Pump, GoldenGate, or ZDM instead."
+  },
+  {
+    "num": 6,
+    "question": "How do you change the tablespace quota for user MTHEO on Autonomous Database on Shared Infrastructure?",
+    "options": [
+      "A. Execute alter user MTHEO quota unlimited on tablespace DATA;",
+      "B. Execute DBMS_CLOUD_ADMIN.GRANT_TABLESPACE_QUOTA(username => 'MTHEO', tablespace_quota => 'UNLIMITED');",
+      "C. Execute alter database for user MTHEO tablespace DATA quota = 10G;",
+      "D. Execute alter tablespace DATA set quota = 10G;"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "On ADB Shared Infrastructure, DBMS_CLOUD_ADMIN.GRANT_TABLESPACE_QUOTA is the correct procedure to manage tablespace quotas."
+  },
+  {
+    "num": 7,
+    "question": "When you are cloning from a backup, what is the earliest timestamp of the backup allowed in Autonomous Database?",
+    "options": [
+      "A. 24 hours",
+      "B. 1 hour",
+      "C. 30 minutes",
+      "D. 2 hours"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "When cloning from a backup, the backup must be at least 2 hours old."
+  },
+  {
+    "num": 8,
+    "question": "Which two actions can be performed when an Autonomous Database is stopped? (Choose two)",
+    "options": [
+      "A. Change Administrator Password",
+      "B. Update License Type",
+      "C. Start",
+      "D. Update Network Access"
+    ],
+    "answer": "BC",
+    "multi": true,
+    "explanation": "When ADB is stopped, you can Start it and Update the License Type. Password changes and network access updates require the database to be running."
+  },
+  {
+    "num": 9,
+    "question": "Which two options are available for restoring an Autonomous Database? (Choose two)",
+    "options": [
+      "A. Specifying the archived custom image.",
+      "B. Specifying the point in time (timestamp) to restore.",
+      "C. Selecting the backup from which restore needs to be done.",
+      "D. Selecting the snapshot of the backup.",
+      "E. Using Recovery Manager (RMAN) to connect to ADB and back it up."
+    ],
+    "answer": "BC",
+    "multi": true,
+    "explanation": "ADB supports point-in-time restore and backup-based restore. RMAN, snapshots, and custom images are not supported restore options."
+  },
+  {
+    "num": 10,
+    "question": "Which statement is true about connecting a marketplace OCI image to an Autonomous Database on Shared Infrastructure?",
+    "options": [
+      "A. The ADB can only be in the same VCN and subnet as the marketplace OCI image.",
+      "B. The ADB must belong to a Network Security Group (NSG).",
+      "C. The marketplace OCI image can be used with an Always Free Autonomous Database account.",
+      "D. A private endpoint is required to connect to the ADB on shared Exadata infrastructure.",
+      "E. The marketplace OCI image does not support connecting to an ADB on Shared Infrastructure."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Marketplace OCI images are compatible with Always Free Autonomous Database accounts."
+  },
+  {
+    "num": 11,
+    "question": "A new Python developer needs to access the Autonomous Database data. How does the developer connect to and interact with the ADB from Python?",
+    "options": [
+      "A. By using SQL Developer",
+      "B. By using Oracle Client and the DBD-oracle interface",
+      "C. By using JDBC Driver",
+      "D. By using Oracle Client and the cx_oracle interface for Python"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Python connects to Oracle ADB using Oracle Client and the cx_Oracle interface."
+  },
+  {
+    "num": 12,
+    "question": "Which three are Oracle-recommended best practices for Autonomous Database alarms? (Choose three)",
+    "options": [
+      "A. Use a single interval for all alarms.",
+      "B. Tune your alarms routinely.",
+      "C. Create a single alarm for each metric.",
+      "D. Suppress alarms during investigations.",
+      "E. Create multiple alarm metrics.",
+      "F. Select the correct alarm interval for your metric."
+    ],
+    "answer": "DEF",
+    "multi": true,
+    "explanation": "Oracle recommends: suppress alarms during investigations, create multiple alarm metrics, and select the correct alarm interval for each metric."
+  },
+  {
+    "num": 13,
+    "question": "Which three tools can be used to monitor the usage and activities of Autonomous Database on Dedicated Infrastructure? (Choose three)",
+    "options": [
+      "A. Enterprise Manager Cloud Control",
+      "B. Logs",
+      "C. OCI Metrics",
+      "D. RMAN",
+      "E. Performance Hub"
+    ],
+    "answer": "ACE",
+    "multi": true,
+    "explanation": "Enterprise Manager Cloud Control, OCI Metrics, and Performance Hub are the correct monitoring tools for ADB Dedicated."
+  },
+  {
+    "num": 14,
+    "question": "Which set of Oracle Cloud Infrastructure (OCI) metrics is available only for Autonomous Database on Dedicated Infrastructure?",
+    "options": [
+      "A. Query Latency, User Calls, Execute Count",
+      "B. IOPS, Storage Space Used By Tablespace, Apply and Transport Lag",
+      "C. CPU Utilization, Storage Utilization",
+      "D. Transaction Count, Sessions, Running Statements"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "IOPS, Storage Space Used By Tablespace, and Apply/Transport Lag metrics are exclusive to ADB Dedicated Infrastructure."
+  },
+  {
+    "num": 15,
+    "question": "Which option should you use to create a graph with Graph Studio?",
+    "options": [
+      "A. NoSQL configuration",
+      "B. Graph created by a special tool downloaded from oracle.com",
+      "C. Tables in an Autonomous Database instance",
+      "D. Graph analytics algorithms",
+      "E. A graph license key"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Graph Studio creates graphs from tables in an Autonomous Database instance."
+  },
+  {
+    "num": 16,
+    "question": "What are the two differentiators of Oracle Autonomous Database on Dedicated Infrastructure? (Choose two)",
+    "options": [
+      "A. Users have SYS privileges in the database.",
+      "B. Users have OS access to the database machine.",
+      "C. Users can customize the OS stack and add additional packages.",
+      "D. Users have more control over the maintenance schedule.",
+      "E. Users are offered greater control and isolation starting at the Exadata Cloud Infrastructure level."
+    ],
+    "answer": "CE",
+    "multi": true,
+    "explanation": "Dedicated Infrastructure differentiates by allowing OS stack customization and providing greater control and isolation at the Exadata Cloud Infrastructure level."
+  },
+  {
+    "num": 17,
+    "question": "During the provisioning of an Autonomous Database on dedicated hardware, what should the DBA select to determine where the ADB is created on the dedicated infrastructure?",
+    "options": [
+      "A. The Client Credentials wallet, which is used to connect to the ADB.",
+      "B. The Listener endpoint where the ADB should register on.",
+      "C. The compartment of the dedicated infrastructure because each compartment only runs one dedicated environment.",
+      "D. The 'High Availability Container Database' in which the Autonomous instance should run."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "The DBA selects the Container Database (Autonomous Container Database) to determine where the ADB instance will be created on dedicated infrastructure."
+  },
+  {
+    "num": 18,
+    "question": "Which statement is FALSE regarding the auto scaling feature of Autonomous Database?",
+    "options": [
+      "A. Auto scaling is enabled by default and can be enabled or disabled at any time.",
+      "B. The base number of OCPU cores allocated to a database is not guaranteed.",
+      "C. For databases on dedicated Exadata infrastructure, the maximum number of cores is limited by the number of free cores not being used by other auto scaling databases.",
+      "D. For databases on dedicated Exadata infrastructure, the maximum number of cores available depends on the total number of cores available in the Exadata infrastructure instance."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "FALSE: The base number of OCPU cores IS guaranteed \u2014 auto scaling only adds cores beyond the base allocation on demand."
+  },
+  {
+    "num": 19,
+    "question": "Which three OCI resources do you need to configure before provisioning your Autonomous Database with private endpoint? (Choose three)",
+    "options": [
+      "A. Subnet",
+      "B. Security List",
+      "C. Route Table",
+      "D. VCN",
+      "E. Network Security Group (NSG)"
+    ],
+    "answer": "ADE",
+    "multi": true,
+    "explanation": "VCN, Subnet, and NSG must be configured before provisioning ADB with private endpoint."
+  },
+  {
+    "num": 20,
+    "question": "In the Autonomous Database on Dedicated Infrastructure service, what does the fleet administrator use to control OCPU utilization?",
+    "options": [
+      "A. Compartment quotas",
+      "B. Oracle Machine Learning notebook",
+      "C. SQL Developer Web Console",
+      "D. Resource Manager settings"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "Fleet administrators use Compartment quotas to control and limit OCPU utilization in ADB Dedicated."
+  },
+  {
+    "num": 21,
+    "question": "An ADB user with an instance wallet has left the company and shared a database user ID with other users. Other than changing the shared user password, what can an administrator do to protect the instance?",
+    "options": [
+      "A. Shut down and restart the instance.",
+      "B. Rotate the instance wallet and share the new wallet with the remaining users.",
+      "C. Delete the database.",
+      "D. Delete the user who left."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "Rotating the instance wallet invalidates the old wallet. The ex-employee's copy becomes useless, while remaining users get the new wallet."
+  },
+  {
+    "num": 22,
+    "question": "Which two statements are true about Data Insights? (Choose two)",
+    "options": [
+      "A. Data Insights is available with on-premises deployments of Oracle Database.",
+      "B. Data Insights is an additional priced option.",
+      "C. You can retrieve previously executed Data Insights searches.",
+      "D. You can search for Data Insights against a base table or business model."
+    ],
+    "answer": "CD",
+    "multi": true,
+    "explanation": "Data Insights allows retrieving previous searches and can be run against base tables or business models. It is ADB-only and included at no extra cost."
+  },
+  {
+    "num": 23,
+    "question": "A customer wants to increase the throughput of their inserts and discovered the bottleneck is in storage I/Os. What should they do?",
+    "options": [
+      "A. Run the DBMS_CLOUD.INCREASE_THROUGHPUT procedure.",
+      "B. Ask Support to migrate their setup to a node without noisy neighbors.",
+      "C. Remove any non-JSON data from the database.",
+      "D. Increase the number of OCPUs allocated to the database."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Increasing OCPUs also scales I/O resources proportionally in Autonomous Database, removing the storage I/O bottleneck."
+  },
+  {
+    "num": 24,
+    "question": "Which three options do NOT change when enabling auto scaling? (Choose three)",
+    "options": [
+      "A. I/O resources",
+      "B. Level of concurrency",
+      "C. Parallelism settings",
+      "D. Amount of storage",
+      "E. Number of OCPUs displayed in the console"
+    ],
+    "answer": "BCD",
+    "multi": true,
+    "explanation": "Auto scaling scales CPU and I/O resources. Concurrency, parallelism settings, and storage amount do NOT change when auto scaling is enabled."
+  },
+  {
+    "num": 25,
+    "question": "Which two license types does a customer need to benefit from BYOL when leveraging on-premises Enterprise Database licenses in Oracle Autonomous Database? (Choose two)",
+    "options": [
+      "A. Real Application Clusters (RAC), but only when scaling beyond 16 OCPUs",
+      "B. Transparent Data Encryption (TDE)",
+      "C. Exadata",
+      "D. Active Data Guard",
+      "E. Multitenant"
+    ],
+    "answer": "AE",
+    "multi": true,
+    "explanation": "For BYOL on ADB, customers need RAC (for >16 OCPUs) and Multitenant licenses from their on-premises Enterprise Database."
+  },
+  {
+    "num": 26,
+    "question": "Which statement is correct about the Service console in an Autonomous Database?",
+    "options": [
+      "A. You can use the Service console to create manual backups.",
+      "B. You can use the Service console to manage runaway SQL statements.",
+      "C. You can use the Service console to move an ADB between compartments.",
+      "D. You can use the Service console to enable or disable autoscaling."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "The Service Console allows managing runaway SQL statements. Manual backups, compartment moves, and autoscaling are done via OCI Console."
+  },
+  {
+    "num": 27,
+    "question": "Which method does NOT permit you to change the database ADMIN user's password of an Oracle Autonomous Database on Shared Infrastructure?",
+    "options": [
+      "A. SQL Developer",
+      "B. OCI CLI",
+      "C. Admin page of the Cloud Service Console",
+      "D. OS command line from the database server"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "OS command line access is not available on ADB. Passwords must be changed via SQL Developer, OCI CLI, or the Cloud Service Console."
+  },
+  {
+    "num": 28,
+    "question": "Which set of options can be specified when defining the preferred maintenance schedule of the Exadata Infrastructure for Autonomous Database Dedicated?",
+    "options": [
+      "A. Quarter of the Year, Month of the Quarter, Date of the Month, Start Hour",
+      "B. Month of the Year, Week of the Month, Day of the Week, Start Hour",
+      "C. Month of the Quarter, Week of the Month, Day of the Week, Start Hour",
+      "D. Week of the Quarter, Day of the Week, Start Hour"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "The maintenance schedule uses: Month of the Quarter, Week of the Month, Day of the Week, and Start Hour."
+  },
+  {
+    "num": 29,
+    "question": "Which two statements are true about accessing the Autonomous Database tools? (Choose two)",
+    "options": [
+      "A. Oracle APEX can be accessed only from the Developer menu in Service Console.",
+      "B. Access to Database Actions is available for all users of Autonomous Database.",
+      "C. SQL Developer Web is available exclusively on Autonomous Database.",
+      "D. Oracle Machine Learning is available only with Autonomous Data Warehouse (ADW) Database.",
+      "E. Database Actions is accessible from a server running on the same VCN when ADB is configured with private endpoint networking."
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "APEX is accessed via the Developer menu in Service Console; SQL Developer Web is exclusive to ADB (not available for on-premises)."
+  },
+  {
+    "num": 30,
+    "question": "Which four file formats are supported when loading data from Cloud Storage? (Choose four)",
+    "options": [
+      "A. DOC",
+      "B. JSON",
+      "C. AVRO",
+      "D. DDL",
+      "E. Parquet",
+      "F. CSV"
+    ],
+    "answer": "BCEF",
+    "multi": true,
+    "explanation": "Cloud Storage data loading supports JSON, AVRO, Parquet, and CSV. DOC and DDL are not supported formats."
+  },
+  {
+    "num": 31,
+    "question": "Oracle Autonomous Database on Dedicated Infrastructure is composed of which Oracle Cloud resources?",
+    "options": [
+      "A. Oracle ML Zeppelin Notebook, Autonomous Exadata infrastructure, Fleet Administrator, and Database Administrator",
+      "B. Fleet Administrator, Database Administrator, Database User, and Autonomous Exadata infrastructure",
+      "C. Virtual Cloud Network, Compartments, Policies, and Autonomous Exadata infrastructure",
+      "D. Autonomous Exadata infrastructure, Autonomous Backup, Autonomous Container Database, and Autonomous Database"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "ADB Dedicated is composed of: Autonomous Exadata Infrastructure, Autonomous Backup, Autonomous Container Database, and Autonomous Database."
+  },
+  {
+    "num": 32,
+    "question": "Which statement is FALSE about Autonomous Database maintenance on Dedicated Infrastructure?",
+    "options": [
+      "A. If a scheduled container database maintenance run cannot take place, Oracle automatically reschedules for the following quarter.",
+      "B. Autonomous Exadata infrastructure maintenance takes place at least once each quarter.",
+      "C. Autonomous Exadata infrastructure maintenance runs include container database patching.",
+      "D. You can change your container database maintenance window or reschedule a single run."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "FALSE: Infrastructure maintenance (Exadata grid/OS patching) does NOT include container database patching \u2014 these are separate maintenance events."
+  },
+  {
+    "num": 33,
+    "question": "Which is NOT needed to manage Oracle Autonomous Database with REST APIs?",
+    "options": [
+      "A. Database ADMIN password",
+      "B. Tenancy's OCID",
+      "C. Fingerprint of the public key",
+      "D. User's OCID"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "REST API management uses OCI API keys (OCID, fingerprint, etc.), not the database ADMIN password."
+  },
+  {
+    "num": 34,
+    "question": "You need to set up a notification for a scheduled shutdown of an Autonomous Database instance. What should you do?",
+    "options": [
+      "A. Create a rule for the OCI Event for 'Autonomous Database STOP END.'",
+      "B. Create a notification alert using DBMS_SNMP package.",
+      "C. Create an OCI Alarm for Shutdown metric.",
+      "D. Add a 'BEFORE SHUTDOWN ON DATABASE' trigger within the database."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "OCI Events with the 'Autonomous Database STOP END' rule is the correct way to set up shutdown notifications."
+  },
+  {
+    "num": 35,
+    "question": "While provisioning a dedicated Autonomous Container Database, which backup retention period CANNOT be implemented?",
+    "options": [
+      "A. 120 days",
+      "B. 15 days",
+      "C. 60 days",
+      "D. 7 days"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "120 days is not a supported backup retention period. Supported values are 7, 15, 30, 45, and 60 days."
+  },
+  {
+    "num": 36,
+    "question": "Which statement is FALSE about Oracle Autonomous JSON Database?",
+    "options": [
+      "A. JSON data is stored natively in the database.",
+      "B. You can promote Autonomous JSON Database to Autonomous Transaction Processing.",
+      "C. It supports NoSQL-style, document-centric applications.",
+      "D. There is a 20 GB limit on JSON collections."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "FALSE: There is no 20 GB limit on JSON collections in Autonomous JSON Database."
+  },
+  {
+    "num": 37,
+    "question": "You need to create a new database using OCI CLI for ATP, License Included, Shared Infrastructure. Which parameter would you NOT use?",
+    "options": [
+      "A. is-dedicated",
+      "B. db-workload",
+      "C. db-type",
+      "D. license-model"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "'db-type' is not a valid OCI CLI parameter for creating ADB. The correct parameters are is-dedicated, db-workload, and license-model."
+  },
+  {
+    "num": 38,
+    "question": "Which command should you issue to enable application continuity on Oracle Autonomous Database on Shared Infrastructure?",
+    "options": [
+      "A. alter database set application_continuity=true",
+      "B. alter session set application_continuity=true",
+      "C. alter system set application_continuity=true",
+      "D. exec dbms_cloud_admin.enable_app_cont('<service_name>');"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Application continuity is enabled via the DBMS_CLOUD_ADMIN.ENABLE_APP_CONT procedure specifying the service name."
+  },
+  {
+    "num": 39,
+    "question": "Data Guard is enabled for your ADB and the Lifecycle State for the primary database indicates it is Stopped. Which statement is true?",
+    "options": [
+      "A. Switchover is automatically initiated.",
+      "B. Standby database is terminated.",
+      "C. Failover is automatically initiated.",
+      "D. Standby database is also stopped."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "When the primary ADB is stopped, the standby is also stopped automatically. No automatic failover or switchover occurs."
+  },
+  {
+    "num": 40,
+    "question": "What happens with the standby database when disabling Autonomous Data Guard?",
+    "options": [
+      "A. The standby database is started in read/write.",
+      "B. The standby database is terminated.",
+      "C. The standby database is started in read-only.",
+      "D. The standby database is transformed into a refreshable clone."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "When Autonomous Data Guard is disabled, the standby database is terminated and removed."
+  },
+  {
+    "num": 41,
+    "question": "Which three methods can be used to migrate your existing Oracle database to Autonomous Database? (Choose three)",
+    "options": [
+      "A. Using SFTP to copy CSV files into an Autonomous Database",
+      "B. Using GoldenGate",
+      "C. Using Recovery Manager (RMAN)",
+      "D. Using Data Pump",
+      "E. Using Oracle Zero Downtime Migration (ZDM)"
+    ],
+    "answer": "BDE",
+    "multi": true,
+    "explanation": "GoldenGate, Data Pump, and Zero Downtime Migration (ZDM) are supported ADB migration methods. RMAN and SFTP/CSV are not supported migration paths."
+  },
+  {
+    "num": 42,
+    "question": "Which Database Actions tool is used to get information about entities in your ADB and see how changing an object affects other objects?",
+    "options": [
+      "A. JSON",
+      "B. Data Insights",
+      "C. Data Load",
+      "D. Catalog"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "The Catalog tool provides entity information and impact analysis \u2014 showing how changes to one object affect dependent objects."
+  },
+  {
+    "num": 43,
+    "question": "Which statement is FALSE about Oracle Data Safe?",
+    "options": [
+      "A. It supports only Autonomous Databases.",
+      "B. It helps you evaluate risks to data, assess user security, monitor user activity, and address data security compliance requirements.",
+      "C. It helps you assess the security of your cloud database configurations.",
+      "D. It helps you find and mask sensitive data by inspecting the actual data and data dictionary.",
+      "E. It evaluates user types, how users are authenticated, and the password policies assigned to each user."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: Oracle Data Safe supports both Autonomous Databases and non-Autonomous Oracle databases."
+  },
+  {
+    "num": 44,
+    "question": "Which statement is FALSE about setting up compartment quotas?",
+    "options": [
+      "A. Compartment quotas cannot be set on the root compartment.",
+      "B. Quotas in a compartment cannot be managed unless you belong to a group that has the correct permissions.",
+      "C. Compartment quotas use policies that allow allocation of resources with a high level of flexibility.",
+      "D. Quotas set on a parent compartment override quotas set on child compartments."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: Compartment quotas CAN be set on the root compartment."
+  },
+  {
+    "num": 45,
+    "question": "Which management operation is correct about Autonomous Databases on shared Exadata infrastructure?",
+    "options": [
+      "A. You can skip a scheduled maintenance run for up to two consecutive quarters if needed.",
+      "B. You can choose to use RU or RUR updates for your ADB on shared Exadata infrastructure.",
+      "C. You cannot configure the scheduling for your ADB on shared Exadata infrastructure.",
+      "D. You can perform a 'rolling restart' on all Autonomous Databases."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "On shared Exadata infrastructure, you cannot configure the maintenance scheduling \u2014 Oracle manages the schedule."
+  },
+  {
+    "num": 46,
+    "question": "What is the correct way to list all files in the default data pump directory?",
+    "options": [
+      "A. By executing SELECT * FROM DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR');",
+      "B. You cannot list files in the default data pump directory from ADW.",
+      "C. Log onto ADW server and issue ls -al on the command line.",
+      "D. By executing SELECT * FROM utl_file.list('DATA_PUMP_DIR');"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR') is the correct function to list files in the data pump directory on ADB."
+  },
+  {
+    "num": 47,
+    "question": "An ADB user with an instance wallet has left the company and shared a database user ID with other users. What can the admin do to protect the instance?",
+    "options": [
+      "A. Trust the user who left to not access the database.",
+      "B. Shutdown and restart the instance.",
+      "C. Rotate the instance wallet and share the new wallet with the remaining users.",
+      "D. Delete the user."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Rotating the instance wallet immediately invalidates all old wallets including the one the departing employee had."
+  },
+  {
+    "num": 48,
+    "question": "While creating an Autonomous Container Database on dedicated infrastructure through OCI console, which patch type is offered to be applied during maintenance?",
+    "options": [
+      "A. Release Update (RU)",
+      "B. Prior Release Update Revision (PRUR)",
+      "C. Prior Release Update (PRU)",
+      "D. Quarterly Bundle Patch (QBP)"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "Release Update (RU) is the patch type offered during ACD maintenance on dedicated infrastructure."
+  },
+  {
+    "num": 49,
+    "question": "Which can be scaled independently of the number of CPUs in an Autonomous Database?",
+    "options": [
+      "A. Parallelism",
+      "B. Storage",
+      "C. Concurrency",
+      "D. Memory",
+      "E. Sessions"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "Storage can be scaled independently of CPUs in Autonomous Database. Parallelism, concurrency, memory, and sessions are tied to CPU count."
+  },
+  {
+    "num": 50,
+    "question": "You are the admin of an ADB instance and a new developer has requested a new workspace in APEX. What step provides the developer a new workspace?",
+    "options": [
+      "A. Create an IDCS user with the APEX role.",
+      "B. Access the APEX Administration Services and create the workspace for the developer.",
+      "C. Create a new developer account.",
+      "D. Create a database user with the APEX role."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "New APEX workspaces are created through APEX Administration Services, not through database user creation or IDCS."
+  },
+  {
+    "num": 51,
+    "question": "When restoring/cloning the ADB, you must select a backup which is at least how old?",
+    "options": [
+      "A. 24 hrs",
+      "B. 2 hrs",
+      "C. 5 min",
+      "D. 1 day"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "When restoring or cloning from a backup, the backup must be at least 24 hours old."
+  },
+  {
+    "num": 52,
+    "question": "Your customer wants to permanently disable scheduled maintenance on Autonomous Dedicated Infrastructure. How can they achieve this?",
+    "options": [
+      "A. Change the Automatic Maintenance Schedule to 'None'.",
+      "B. Change the Automatic Maintenance Schedule to 'Specify a Schedule' but do not select any month, week or day.",
+      "C. You cannot permanently disable scheduled Automatic Maintenance.",
+      "D. Change the Automatic Maintenance Schedule to 'No Preference'."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Scheduled maintenance on Autonomous Dedicated Infrastructure cannot be permanently disabled \u2014 Oracle requires periodic maintenance."
+  },
+  {
+    "num": 53,
+    "question": "A corporation needs OLTP for web app and operational reports during non-peak hours. The DBA Manager wants low/zero maintenance but strict performance. Which OCI database service is appropriate?",
+    "options": [
+      "A. Since the application needs to be highly available, deploy on a Kubernetes Cluster.",
+      "B. ADW since operational reporting is a higher priority.",
+      "C. It is best to build a separate data warehouse and move OLTP data nightly.",
+      "D. ATP. Using 'tpurgent' and 'high' TNS services to separate connection types."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "ATP supports both OLTP and reporting workloads through different TNS service tiers (tpurgent for OLTP, high for reporting), with minimal DBA overhead."
+  },
+  {
+    "num": 54,
+    "question": "Which statement is true when the Autonomous Database has auto scaling enabled?",
+    "options": [
+      "A. Database concurrency is scaled up when needed by the workload.",
+      "B. Increases the number of sessions available to the database.",
+      "C. Scales the PGA and SGA size when needed for the workload.",
+      "D. Enables the database to use up to 3x CPU/IO resources immediately when needed by the workload."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Auto scaling allows the database to use up to 3x the base CPU/IO resources immediately when workload demands increase."
+  },
+  {
+    "num": 55,
+    "question": "Which three options are supported when migrating to Autonomous Database (ADB)? (Choose three)",
+    "options": [
+      "A. RMAN Cross-Platform backup and restore",
+      "B. GoldenGate on-premise installation",
+      "C. PDB unplug/plug operation",
+      "D. Datapump export/import",
+      "E. Dataguard Physical Standby",
+      "F. GoldenGate Cloud service"
+    ],
+    "answer": "BDF",
+    "multi": true,
+    "explanation": "Supported migration options: GoldenGate (on-prem or cloud) and Data Pump export/import. RMAN cross-platform, PDB plug/unplug, and Data Guard are not supported migration paths."
+  },
+  {
+    "num": 56,
+    "question": "What REST verb is used to create an Autonomous Database service using REST APIs?",
+    "options": [
+      "A. An 'INSERT' REST call",
+      "B. A 'GET' REST call",
+      "C. A 'POST' REST call",
+      "D. A 'PUT' REST call"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "HTTP POST is used to create new resources (including ADB instances) via OCI REST APIs."
+  },
+  {
+    "num": 57,
+    "question": "You are the admin of an ADB instance. A new business analyst wants to explore ADB tables using SQL Developer Web. What steps do you need to take?",
+    "options": [
+      "A. Create a database user (with connect, resource, object privileges), enable the schema to use SQL Developer, and provide the user with the user-specific modified URL.",
+      "B. Create a database user with the default privileges.",
+      "C. Create a database user with connect, resource, and object privileges.",
+      "D. Create an IDCS user. Create a database user with connect, resource, and object privileges."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "SQL Developer Web requires: creating the user with proper privileges, enabling REST for the schema, and providing the user-specific URL."
+  },
+  {
+    "num": 58,
+    "question": "You have an ATP Database with 3 OCPUs, autoscaling on, using TPURGENT service. Load increases from 3 to 9 OCPUs. What is the total number of concurrent statements TPURGENT can support?",
+    "options": [
+      "A. 900",
+      "B. 1800",
+      "C. 2700",
+      "D. 1500"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "TPURGENT supports 300 concurrent statements per OCPU. With 9 OCPUs (3x autoscale): 9 \u00d7 300 = 2700 concurrent statements."
+  },
+  {
+    "num": 59,
+    "question": "Which statement is FALSE for Oracle Data Safe?",
+    "options": [
+      "A. Oracle Data Safe helps you assess the security of your cloud database configurations.",
+      "B. Oracle Data Safe evaluates user types, how users are authenticated, and the password policies.",
+      "C. Oracle Data Safe only supports Autonomous Databases.",
+      "D. Oracle Data Safe helps you find sensitive data in your database."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "FALSE: Oracle Data Safe supports both Autonomous and non-Autonomous Oracle databases."
+  },
+  {
+    "num": 60,
+    "question": "Which two methods can you use to create database users and grant roles in Autonomous Database services? (Choose two)",
+    "options": [
+      "A. service console",
+      "B. SQL Developer",
+      "C. the DBMS_CLOUD_ADMIN package",
+      "D. SQL*Plus"
+    ],
+    "answer": "BD",
+    "multi": true,
+    "explanation": "SQL Developer and SQL*Plus can both be used to create users and grant roles in ADB."
+  },
+  {
+    "num": 61,
+    "question": "Which predefined role in Autonomous Database includes common privileges used by a Data Warehouse developer?",
+    "options": [
+      "A. ADMIN",
+      "B. ADBDEV",
+      "C. DWROLE",
+      "D. ADWC"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "DWROLE is the predefined role with common privileges for Data Warehouse developers in ADB."
+  },
+  {
+    "num": 62,
+    "question": "What predefined user is created when provisioning an ADB instance to which you connect to create other users and grant roles?",
+    "options": [
+      "A. DWDEV",
+      "B. ADMIN",
+      "C. SCOTT",
+      "D. SYS"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "The ADMIN user is the default administrative user created during ADB provisioning."
+  },
+  {
+    "num": 63,
+    "question": "Which two optimizations are different between Autonomous Data Warehouse and Autonomous Transaction Processing? (Choose two)",
+    "options": [
+      "A. Backup Retention",
+      "B. Memory Usage",
+      "C. Data Organization",
+      "D. Undo Management"
+    ],
+    "answer": "BC",
+    "multi": true,
+    "explanation": "ADW and ATP differ in Memory Usage (ADW optimizes for large queries; ATP for many short transactions) and Data Organization (columnar vs row-based)."
+  },
+  {
+    "num": 64,
+    "question": "Which index type is designed to index catalog information?",
+    "options": [
+      "A. CONTEXT",
+      "B. CTXRULE",
+      "C. CONTRAINS",
+      "D. CTXCAT"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "CTXCAT (Oracle Text Catalog Index) is specifically designed for indexing catalog-style data."
+  },
+  {
+    "num": 65,
+    "question": "Which statement is FALSE about loading data into ADB using the Data Load card in Database Actions?",
+    "options": [
+      "A. You must first manually create your database credentials using dbms_cloud.create_credential before accessing your Oracle Object Storage Bucket.",
+      "B. Data can be uploaded from several cloud storage sources including S3, Azure, Google Cloud and Oracle Object Storage.",
+      "C. Data formats supported include: text, csv, json, avro and parquet.",
+      "D. Data can be loaded from a local data source.",
+      "E. Data can be loaded from a remote database using Database Links."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: The Data Load card automatically handles credential creation \u2014 you do not need to manually run dbms_cloud.create_credential beforehand."
+  },
+  {
+    "num": 66,
+    "question": "Which subset of services is offered via OCI-CLI for Autonomous Database via calls made to the OCI APIs?",
+    "options": [
+      "A. Start, Delete, Update, Query, Stop",
+      "B. Create, Get, List, Stop, Restore",
+      "C. Create, Query, Update, List, Start",
+      "D. Create, Query, List, Stop, Restore"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "OCI CLI for ADB supports: Create, Get, List, Stop, and Restore operations."
+  },
+  {
+    "num": 67,
+    "question": "Which predefined service connection should you use when running lots of high concurrent queries in Autonomous Database?",
+    "options": [
+      "A. DBNAME_CONCURRENT",
+      "B. DBNAME_MEDIUM",
+      "C. DBNAME_HIGH",
+      "D. DBNAME_LOW"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "LOW service provides the highest concurrency with lowest resource per query \u2014 ideal for many concurrent queries."
+  },
+  {
+    "num": 68,
+    "question": "Which of the following two statements regarding Data Transforms are correct? (Choose two)",
+    "options": [
+      "A. Data Transforms allow you to design data transformations in the form of data loads, data flows, and workflows.",
+      "B. Data Transforms provides access to Oracle Data Integrator (ODI) Web Edition.",
+      "C. All capabilities to transform data in ODI Classic are available with ODI Web Edition.",
+      "D. Workflows for data transform is only available on the ODI Web Edition."
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "Data Transforms supports data loads, flows, and workflows; however, ODI Web Edition does NOT include all ODI Classic capabilities."
+  },
+  {
+    "num": 69,
+    "question": "What two actions can you do when a refreshable clone passes the refresh time limit? (Choose two)",
+    "options": [
+      "A. You can use the instance as a read-only database.",
+      "B. You can disconnect from the source to make the database a read/write database.",
+      "C. You can extend the refresh time limit.",
+      "D. You can manually refresh the clone."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "When a refreshable clone exceeds the refresh time limit, you can use it as read-only or disconnect it from the source to convert it to read/write."
+  },
+  {
+    "num": 70,
+    "question": "Which are two available options when creating an Autonomous Database? (Choose two)",
+    "options": [
+      "A. APEX Service on Shared Infrastructure",
+      "B. Autonomous JSON Database on Shared Infrastructure",
+      "C. Autonomous JSON Database on Dedicated Infrastructure",
+      "D. APEX Service on Dedicated Infrastructure"
+    ],
+    "answer": "BD",
+    "multi": true,
+    "explanation": "When creating ADB, you can choose Autonomous JSON Database on Shared Infrastructure or APEX Service on Dedicated Infrastructure."
+  },
+  {
+    "num": 71,
+    "question": "What is the default time range in Performance Hub?",
+    "options": [
+      "A. 1 Week",
+      "B. 1 Hour",
+      "C. 24 Hours",
+      "D. 15 Minutes"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Performance Hub defaults to a 24-hour time range view."
+  },
+  {
+    "num": 72,
+    "question": "You see a clock icon in the Status column on the SQL Monitoring tab of Performance Hub. What does it indicate?",
+    "options": [
+      "A. The SQL statement did not complete due to an error.",
+      "B. The SQL statement is queued.",
+      "C. The SQL statement is executing.",
+      "D. The SQL statement completed its execution."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "A clock icon in SQL Monitoring indicates the SQL statement is queued (waiting to execute)."
+  },
+  {
+    "num": 73,
+    "question": "Which three event types are supported for Autonomous Database? (Choose three)",
+    "options": [
+      "A. Change Compartment Begin",
+      "B. Terminate End",
+      "C. Change Autoscaling Configuration Compartment",
+      "D. Maintenance Begin",
+      "E. Update IORM Begin"
+    ],
+    "answer": "ABC",
+    "multi": true,
+    "explanation": "Supported ADB event types include: Change Compartment Begin, Terminate End, and Change Autoscaling Configuration Compartment."
+  },
+  {
+    "num": 74,
+    "question": "Which vaults are used for storing customer-managed encryption keys for Autonomous Database on Dedicated Infrastructure?",
+    "options": [
+      "A. Oracle Cloud Infrastructure Vault, Oracle Database Vault.",
+      "B. Oracle Database Vault, Oracle Key Vault.",
+      "C. Oracle Audit Vault, Oracle Key Vault.",
+      "D. Oracle Key Vault, Oracle Cloud Infrastructure Vault."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Customer-managed encryption keys for ADB Dedicated are stored in Oracle Key Vault (OKV) and Oracle Cloud Infrastructure Vault."
+  },
+  {
+    "num": 75,
+    "question": "Which statement is FALSE regarding the auto scaling feature? (Repeat variation)",
+    "options": [
+      "A. For database on dedicated Exadata infrastructure, the maximum number of cores available depends on the total number of cores available in the Exadata infrastructure instance.",
+      "B. For database on dedicated Exadata infrastructure, the maximum number of cores is limited by the number of free cores not being used by other auto scaling databases.",
+      "C. The base number of OCPU cores allocated to a database is not guaranteed.",
+      "D. Auto scaling is enabled by default and can be enabled or disabled at any time."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "FALSE: The base OCPU count IS guaranteed. Auto scaling only provides additional cores beyond the guaranteed base."
+  },
+  {
+    "num": 76,
+    "question": "During provisioning of an ADB on dedicated hardware, what should the DBA select to determine where the ADB is created?",
+    "options": [
+      "A. The Listener endpoint where the ADB should register on.",
+      "B. The Client Credentials wallet, which is used to connect to the ADB.",
+      "C. The Container database in which the Autonomous instance should run.",
+      "D. The compartment of the dedicated infrastructure because each compartment only runs one dedicated environment."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "The DBA selects the Autonomous Container Database to determine placement on dedicated infrastructure."
+  },
+  {
+    "num": 77,
+    "question": "Which option describes the connection types that third-party software can use to connect to an Autonomous Database?",
+    "options": [
+      "A. JDBC only",
+      "B. New ADB-specific protocols",
+      "C. Any protocol supported by Oracle Net Services",
+      "D. SQL*NET only"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "ADB supports any protocol supported by Oracle Net Services \u2014 JDBC, ODBC, OCI, etc."
+  },
+  {
+    "num": 78,
+    "question": "Your company has a .NET application and wants to deploy it on Autonomous Database. What software is used to connect?",
+    "options": [
+      "A. You cannot use .NET with ADB.",
+      "B. Java",
+      "C. SQL*Plus",
+      "D. Oracle Data Access Components for Windows."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Oracle Data Access Components (ODAC) for Windows provides .NET connectivity to Oracle Autonomous Database."
+  },
+  {
+    "num": 79,
+    "question": "Which two cloud services allow you to import Data Pump files to an ADB on Dedicated Infrastructure? (Choose two)",
+    "options": [
+      "A. Oracle Cloud Infrastructure Object Storage",
+      "B. Amazon S3",
+      "C. Azure Blob Storage",
+      "D. Oracle Cloud Infrastructure Object Storage Classic",
+      "E. Google Cloud Storage"
+    ],
+    "answer": "AD",
+    "multi": true,
+    "explanation": "Data Pump import to ADB Dedicated supports OCI Object Storage and OCI Object Storage Classic."
+  },
+  {
+    "num": 80,
+    "question": "Which workload is particularly suited to Oracle Autonomous JSON Database?",
+    "options": [
+      "A. Transactions",
+      "B. Data Lakes",
+      "C. Schemaless, document-centric",
+      "D. Data Marts"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Autonomous JSON Database is optimized for schemaless, document-centric (NoSQL-style) workloads."
+  },
+  {
+    "num": 81,
+    "question": "Which three functions are provided by Spatial Studio? (Choose three)",
+    "options": [
+      "A. Map visualization",
+      "B. Custom SQL queries",
+      "C. Spatial data editing",
+      "D. Spatial analysis",
+      "E. Geocoding"
+    ],
+    "answer": "ACD",
+    "multi": true,
+    "explanation": "Spatial Studio provides: Map visualization, Spatial data editing, and Spatial analysis. Geocoding is a separate function and SQL is used internally but not exposed as a feature."
+  },
+  {
+    "num": 82,
+    "question": "Which two statements apply to the Autonomous Database service on Dedicated Infrastructure? (Choose two)",
+    "options": [
+      "A. You, as the customer, are responsible for all patching operations.",
+      "B. Patching occurs on the first Sunday of each quarter.",
+      "C. You can set maintenance windows for each individual Autonomous Container Database.",
+      "D. You can set maintenance windows for an Autonomous Exadata Infrastructure."
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "On ADB Dedicated, customers are responsible for patching and can set maintenance windows per Autonomous Container Database."
+  },
+  {
+    "num": 83,
+    "question": "Which statement is FALSE about Autonomous Database maintenance on Dedicated Infrastructure? (Variation)",
+    "options": [
+      "A. Autonomous Exadata Infrastructure maintenance runs are for infrastructure patching and includes container database patching.",
+      "B. You can change your container database maintenance window or reschedule a single run.",
+      "C. If a scheduled container database maintenance run cannot take place, Oracle will automatically reschedule for the following quarter.",
+      "D. Autonomous Exadata Infrastructure maintenance takes place at least once each quarter."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: Infrastructure maintenance (Exadata grid/OS) does NOT include container database patching \u2014 these are separate events."
+  },
+  {
+    "num": 84,
+    "question": "Which three tools can be used to monitor the usage and activities of Autonomous Database on Dedicated Infrastructure? (Variation - Choose three)",
+    "options": [
+      "A. Enterprise Manager Cloud Control",
+      "B. Performance Hub",
+      "C. Logs",
+      "D. RMAN",
+      "E. OCI Metrics"
+    ],
+    "answer": "ABE",
+    "multi": true,
+    "explanation": "Enterprise Manager Cloud Control, Performance Hub, and OCI Metrics are the three monitoring tools for ADB Dedicated."
+  },
+  {
+    "num": 85,
+    "question": "Which two statements are true about RTO and RPO for Autonomous Data Guard? (Choose two)",
+    "options": [
+      "A. RTO and RPO are 0 minutes for manual failovers.",
+      "B. RPO is adjustable, but RTO is always 5 minutes.",
+      "C. RPO is 0 minutes for an automatic failover.",
+      "D. RTO and RPO are adjustable through the OCI console.",
+      "E. RTO is 2 minutes for an automatic failover."
+    ],
+    "answer": "CE",
+    "multi": true,
+    "explanation": "For Autonomous Data Guard: RPO is 0 minutes for automatic failover, and RTO is 2 minutes for automatic failover."
+  },
+  {
+    "num": 86,
+    "question": "Users connect to ADW using High, Medium, and Low consumer groups. Which statement is true?",
+    "options": [
+      "A. High provides highest concurrency and lowest resources, and DOP is 1.",
+      "B. Low provides highest concurrency and lowest resources, and DOP is 1.",
+      "C. Medium provides intermediate resource and concurrency, and queries run serially.",
+      "D. High provides highest resource and lowest concurrency, and Degree of Parallelism (DoP) is 1."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "LOW provides highest concurrency with lowest resources, running queries serially (DOP=1). HIGH provides highest resources with lowest concurrency."
+  },
+  {
+    "num": 87,
+    "question": "Which statement is FALSE about the Catalog tool?",
+    "options": [
+      "A. You can delete an entity from the Autonomous Database via the Catalog tool.",
+      "B. You can view the data definition of an entity.",
+      "C. Impact shows the entities that depend on the source.",
+      "D. You can limit the display of entities to only those with certain names, schemas, types, or applications."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: The Catalog tool is read-only \u2014 you cannot delete entities from ADB using it."
+  },
+  {
+    "num": 88,
+    "question": "What are three characteristics of Data Lake data captured in Object Storage? (Choose three)",
+    "options": [
+      "A. High concurrency",
+      "B. High transaction performance",
+      "C. Multiple subject areas",
+      "D. Mixed data types",
+      "E. Schema on read"
+    ],
+    "answer": "CDE",
+    "multi": true,
+    "explanation": "Data Lake characteristics: Multiple subject areas, Mixed data types, and Schema on read (data structure defined at query time, not load time)."
+  },
+  {
+    "num": 89,
+    "question": "Which is a feature of a graph query language?",
+    "options": [
+      "A. Scripting language",
+      "B. Run key-value queries",
+      "C. Object-oriented language",
+      "D. Ability to specify patterns"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Graph query languages (PGQL, SPARQL) are designed to specify and match patterns in graph data."
+  },
+  {
+    "num": 90,
+    "question": "Which terminology is used to refer to a communication channel for sending messages to a subscription, such as email or SMS?",
+    "options": [
+      "A. Event",
+      "B. Topic",
+      "C. Notification",
+      "D. Subject"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "In OCI Notifications, a Topic is the communication channel to which subscriptions (email, SMS, etc.) are attached."
+  },
+  {
+    "num": 91,
+    "question": "Which two statements are true about Oracle Cloud Infrastructure (OCI)? (Choose two)",
+    "options": [
+      "A. An OCI region is a localized geographic area, and an availability domain is one or more data centers within a region.",
+      "B. Because availability domains don't share infrastructure like power or cooling, a failure at one AD is unlikely to impact others within the same region.",
+      "C. A single fault domain can be associated with multiple regions and availability domains.",
+      "D. Regions are dependent on other regions and must be located within 5 thousand kilometers of each other."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "OCI regions contain multiple Availability Domains; ADs are isolated with separate power/cooling/networking for fault tolerance."
+  },
+  {
+    "num": 92,
+    "question": "Which two statements are true regarding active transactions when scaling OCPUs in an Autonomous Database? (Choose two)",
+    "options": [
+      "A. Scaling can happen while there are active transactions in the database.",
+      "B. Active transactions are paused.",
+      "C. Active transactions are terminated and rolled back.",
+      "D. Active transactions continue running unaffected."
+    ],
+    "answer": "AD",
+    "multi": true,
+    "explanation": "OCPU scaling in ADB is online \u2014 it can happen with active transactions, which continue running unaffected."
+  },
+  {
+    "num": 93,
+    "question": "Which TWO infrastructure options support deployment of Oracle Autonomous Database? (Choose two)",
+    "options": [
+      "A. Dedicated Exadata Infrastructure",
+      "B. Virtual Machines on Oracle Cloud Infrastructure",
+      "C. Shared Exadata Infrastructure",
+      "D. Oracle Bare Metal Servers"
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "ADB runs on Dedicated Exadata Infrastructure and Shared (Serverless) Exadata Infrastructure only."
+  },
+  {
+    "num": 94,
+    "question": "Which is an Autonomous Database critical event?",
+    "options": [
+      "A. NewMaintenanceSchedule",
+      "B. ScheduleMaintenanceWarning",
+      "C. DatabaseConnection",
+      "D. MaintenanceBegin",
+      "E. AdminPasswordWarning"
+    ],
+    "answer": "E",
+    "multi": false,
+    "explanation": "AdminPasswordWarning is classified as a critical event in Autonomous Database event types."
+  },
+  {
+    "num": 95,
+    "question": "Which two objects are imported when using Data Pump to migrate your Oracle database to Autonomous Database? (Choose two)",
+    "options": [
+      "A. Data",
+      "B. Report",
+      "C. Schemas",
+      "D. Tablespaces"
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "Data Pump migrates Data and Schemas to ADB. Tablespaces are not migrated (ADB manages its own tablespaces) and Reports are not a database object."
+  },
+  {
+    "num": 96,
+    "question": "To whom, and in which order, are dedicated Exadata Infrastructure resources provisioned?",
+    "options": [
+      "A. DBA provisions Autonomous Container DB and ADB. Then fleet admin provisions Autonomous Exadata Infrastructure.",
+      "B. Fleet admin provisions Autonomous Exadata Infrastructure. Then DBA provisions Autonomous Container DB and then the ADB.",
+      "C. DBA provisions Autonomous Exadata Infrastructure. Then fleet admin provisions Autonomous Container DB and then the ADB.",
+      "D. Fleet admin provisions Autonomous Exadata Infrastructure and then Autonomous Container DB. Then DBA provisions the ADB."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Provisioning order: Fleet Admin \u2192 Exadata Infrastructure \u2192 Container DB; then Database Admin \u2192 Autonomous Database."
+  },
+  {
+    "num": 97,
+    "question": "As a database architect, you need a high concurrency OLTP connection with some parallel reporting. Which connection service is appropriate?",
+    "options": [
+      "A. TP",
+      "B. TPURGENT",
+      "C. MEDIUM",
+      "D. HIGH"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "HIGH service supports parallel query execution, making it suitable for reporting that needs parallelism alongside OLTP."
+  },
+  {
+    "num": 98,
+    "question": "Which file is NOT a component of the client credentials wallet used to connect to an Oracle Autonomous Database?",
+    "options": [
+      "A. cwallet.sso",
+      "B. sqlnet.ora",
+      "C. trustore.jks",
+      "D. keystore.jks",
+      "E. ewallet.p12",
+      "F. protocol.ora"
+    ],
+    "answer": "F",
+    "multi": false,
+    "explanation": "protocol.ora is not part of the ADB client credentials wallet. The wallet contains: cwallet.sso, sqlnet.ora, tnsnames.ora, ojdbc.properties, truststore.jks, keystore.jks, and ewallet.p12."
+  },
+  {
+    "num": 99,
+    "question": "Which three operations are available for a quarterly maintenance update on Autonomous Container Database? (Choose three)",
+    "options": [
+      "A. Reschedule patching.",
+      "B. Reschedule and patch immediately.",
+      "C. Apply a partial patch.",
+      "D. Patch immediately.",
+      "E. Skip patching."
+    ],
+    "answer": "ABE",
+    "multi": true,
+    "explanation": "For quarterly ACD maintenance, you can: Reschedule, Reschedule and patch immediately, or Skip patching."
+  },
+  {
+    "num": 100,
+    "question": "Which two actions can you perform with Autonomous Data Guard enabled on Autonomous Database on Shared Infrastructure? (Choose two)",
+    "options": [
+      "A. Switchover",
+      "B. View Apply Lag",
+      "C. Reinstate",
+      "D. Failover",
+      "E. Change Protection Mode"
+    ],
+    "answer": "AD",
+    "multi": true,
+    "explanation": "With Autonomous Data Guard on Shared Infrastructure, you can perform Switchover and Failover operations."
+  },
+  {
+    "num": 101,
+    "question": "Which statement is FALSE about Data Insights?",
+    "options": [
+      "A. Data Insights provides a wide range of graphical data presentation capabilities.",
+      "B. The results of the Insight analysis appear as a series of bar charts in the Data Insights dashboard.",
+      "C. Data Insights display information about patterns and anomalies in the data of entities in your ADB.",
+      "D. Data Insights are automatically generated by various analytic functions built into the database."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "FALSE: Data Insights presents results as bar charts specifically \u2014 it does NOT provide a wide range of graphical presentation types."
+  },
+  {
+    "num": 102,
+    "question": "Which are the two restrictions for an Always Free Autonomous Database? (Choose two)",
+    "options": [
+      "A. Oracle Application Express (APEX) not included.",
+      "B. Supports only ATP as a workload type.",
+      "C. Maximum of two Always Free Databases per OCI tenancy.",
+      "D. Maximum of one OCPU per Database."
+    ],
+    "answer": "CD",
+    "multi": true,
+    "explanation": "Always Free ADB: limited to 2 databases per tenancy and 1 OCPU per database. APEX is included and both ADW/ATP workloads are supported."
+  },
+  {
+    "num": 103,
+    "question": "How can you keep Autonomous Database tables in sync with an on-premises data source?",
+    "options": [
+      "A. Use the ORDS package on the Data Load page.",
+      "B. Use the FEED DATA option on the Data Load page.",
+      "C. Use the Cloud Locations card on the Data Load page.",
+      "D. Use the Link Data option on the Data Load page."
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "Cloud Locations on the Data Load page allows you to set up ongoing sync between ADB tables and external data sources."
+  },
+  {
+    "num": 104,
+    "question": "Which statement is FALSE regarding provisioning ADB with private endpoints and configuring security rules?",
+    "options": [
+      "A. The destination port range is set to 1522.",
+      "B. The source is set to the address range you want to allow to connect to your database.",
+      "C. The IP Protocol is set to TCP.",
+      "D. A stateless ingress rule is created to allow connections from the source to the ADB instance."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "FALSE: A STATEFUL (not stateless) ingress rule is created. Stateless rules require explicit egress rules; ADB uses stateful rules."
+  },
+  {
+    "num": 105,
+    "question": "You created an ADB without auto scaling. Which two ways can you enable auto scaling? (Choose two)",
+    "options": [
+      "A. Click Scale Up/Down and select the Auto Scaling checkbox.",
+      "B. Shut down the instance, click Scale Up/Down and select Auto Scaling checkbox, then restart.",
+      "C. Use a REST call to enable Auto Scaling.",
+      "D. Use a REST call to shut down the instance, then enable auto scaling, then restart."
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "Auto scaling can be enabled via the OCI Console (Scale Up/Down dialog) or via a REST API call \u2014 no shutdown required."
+  },
+  {
+    "num": 106,
+    "question": "Which of the following is NOT required for connecting to ADB via SQL Developer?",
+    "options": [
+      "A. Connection Name",
+      "B. Username",
+      "C. Password",
+      "D. Service",
+      "E. Database name"
+    ],
+    "answer": "E",
+    "multi": false,
+    "explanation": "SQL Developer connects to ADB using: Connection Name, Username, Password, and Service (from tnsnames.ora in the wallet). The database name is not a separate required field."
+  },
+  {
+    "num": 107,
+    "question": "Which two statements are true about RPO and RTO for Autonomous Data Guard? (Choose two)",
+    "options": [
+      "A. RPO is adjustable, but RTO is always 5 minutes.",
+      "B. RPO is 0 minutes for an automatic failover.",
+      "C. RTO is 2 minutes for automatic failover.",
+      "D. RTO and RPO are adjustable through the OCI console."
+    ],
+    "answer": "BC",
+    "multi": true,
+    "explanation": "RPO is 0 minutes for automatic failover (zero data loss), and RTO is 2 minutes for automatic failover."
+  },
+  {
+    "num": 108,
+    "question": "Which two statements are true about license types in Autonomous Database? (Choose two)",
+    "options": [
+      "A. You cannot update your BYOL to License Included after the Database has been created.",
+      "B. You can update the License Included option to BYOL after the Database has been created.",
+      "C. You can upgrade from an Always Free ADB account to a paid account anytime.",
+      "D. License type cannot be changed after provisioning."
+    ],
+    "answer": "BC",
+    "multi": true,
+    "explanation": "You can switch from License Included to BYOL post-creation, and Always Free can be upgraded to paid at any time."
+  },
+  {
+    "num": 109,
+    "question": "What two infrastructure options support deployment of Oracle Autonomous Database? (Choose two)",
+    "options": [
+      "A. Shared Exadata Infrastructure",
+      "B. Dedicated Exadata Infrastructure",
+      "C. Virtual Machine Infrastructure",
+      "D. Bare Metal Infrastructure"
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "ADB is deployed on Shared (Serverless) Exadata Infrastructure or Dedicated Exadata Infrastructure."
+  },
+  {
+    "num": 110,
+    "question": "What two actions can you take when a refreshable clone passes the refresh time limit? (Choose two)",
+    "options": [
+      "A. You can use the instance as a read-only database.",
+      "B. You can manually refresh the clone.",
+      "C. You can disconnect from source to make it read/write.",
+      "D. You can extend the refresh time limit."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "When a refreshable clone exceeds the time limit, it can be used as read-only or manually refreshed."
+  },
+  {
+    "num": 111,
+    "question": "Which statement is correct about maintenance runs on Autonomous Databases on Shared Infrastructure?",
+    "options": [
+      "A. You can skip maintenance runs for up to two consecutive quarters if needed.",
+      "B. You cannot skip any maintenance runs on shared infrastructure.",
+      "C. Maintenance runs can be permanently disabled.",
+      "D. Oracle automatically reschedules skipped runs to the following week."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "On ADB Shared Infrastructure, you can skip scheduled maintenance runs for up to two consecutive quarters."
+  },
+  {
+    "num": 112,
+    "question": "What is the maximum number of concurrent statements for the HIGH service with auto scaling at maximum (3x)?",
+    "options": [
+      "A. 3 x OCPU base",
+      "B. 20 x OCPU",
+      "C. 300 x OCPU",
+      "D. 10 x OCPU"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "The HIGH consumer group supports 20 concurrent statements per OCPU."
+  },
+  {
+    "num": 113,
+    "question": "Which statement is true about database links with Autonomous Database?",
+    "options": [
+      "A. Database links are not supported in ADB.",
+      "B. You can create a database link from one ADB to another ADB instance.",
+      "C. Database links only work from ADB to on-premises Oracle databases.",
+      "D. Only the ADMIN user can use database links in ADB."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "Database links are supported in ADB and can connect one Autonomous Database instance to another."
+  },
+  {
+    "num": 114,
+    "question": "Which two protection modes are supported by Data Guard on Autonomous Database on Dedicated Infrastructure? (Choose two)",
+    "options": [
+      "A. Maximum Performance",
+      "B. Maximum Continuity",
+      "C. Maximum Availability",
+      "D. Maximum Protection"
+    ],
+    "answer": "AC",
+    "multi": true,
+    "explanation": "ADB Dedicated Data Guard supports Maximum Performance and Maximum Availability protection modes."
+  },
+  {
+    "num": 115,
+    "question": "Data Guard is enabled for your ADB and the primary database Lifecycle State indicates Stopped. What happens to the standby?",
+    "options": [
+      "A. Standby database is automatically started.",
+      "B. Failover is automatically initiated.",
+      "C. Switchover is automatically initiated.",
+      "D. Standby database is also stopped."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "When the primary ADB is stopped with Data Guard enabled, the standby database is also stopped."
+  },
+  {
+    "num": 116,
+    "question": "Which privilege should NOT be granted to regular database users on Autonomous Database?",
+    "options": [
+      "A. CONNECT",
+      "B. RESOURCE",
+      "C. UNLIMITED TABLESPACE",
+      "D. DWROLE"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "UNLIMITED TABLESPACE is a system privilege that should not be granted to regular users \u2014 use DBMS_CLOUD_ADMIN.GRANT_TABLESPACE_QUOTA instead."
+  },
+  {
+    "num": 117,
+    "question": "Which two scenarios are appropriate use cases for Graph in Autonomous Database? (Choose two)",
+    "options": [
+      "A. Find patterns that are anomalous and use that to detect fraud.",
+      "B. Product recommendations.",
+      "C. High-volume OLTP transaction processing.",
+      "D. Bulk data loading from Object Storage."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "Graph databases excel at fraud detection (anomalous pattern finding) and recommendation engines (relationship traversal)."
+  },
+  {
+    "num": 118,
+    "question": "Which four resources are needed when using Private Endpoints for Autonomous Database? (Choose four)",
+    "options": [
+      "A. Autonomous Database instance",
+      "B. Virtual Cloud Network and Subnet",
+      "C. Network Security Group(s)",
+      "D. Identity and Access Management (IAM) policy rules",
+      "E. Load Balancer",
+      "F. Internet Gateway"
+    ],
+    "answer": "ABCD",
+    "multi": true,
+    "explanation": "Private endpoint ADB requires: ADB instance, VCN+Subnet, NSG(s), and IAM policies."
+  },
+  {
+    "num": 119,
+    "question": "How can you use Oracle Autonomous JSON Database to interact with JSON data through a cloud console tool?",
+    "options": [
+      "A. Oracle Cloud Infrastructure console using the JSON Developer tool.",
+      "B. SQL Developer Web JSON worksheet.",
+      "C. APEX JSON Workshop.",
+      "D. Database Actions Data Load card."
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "The OCI Console provides the JSON Developer tool for interacting with JSON collections in Autonomous JSON Database."
+  },
+  {
+    "num": 120,
+    "question": "Which three actions can be performed from the Administration page of Autonomous Database? (Choose three)",
+    "options": [
+      "A. Download the wallet.",
+      "B. Set resource management rules.",
+      "C. Rotate the wallet.",
+      "D. Scale up the database.",
+      "E. Create database users."
+    ],
+    "answer": "ABC",
+    "multi": true,
+    "explanation": "The Administration page allows: downloading the wallet, setting resource management rules, and rotating the wallet."
+  },
+  {
+    "num": 121,
+    "question": "Which two statements describe Spatial Studio? (Choose two)",
+    "options": [
+      "A. It is a developer IDE for Spatial.",
+      "B. It is a self-service no-code web tool for Spatial.",
+      "C. It requires Oracle Spatial license.",
+      "D. It is only available for on-premises Oracle databases."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "Spatial Studio is both a developer IDE and a self-service no-code web tool for working with spatial data in ADB."
+  },
+  {
+    "num": 122,
+    "question": "Which two encryption features does Autonomous Database support? (Choose two)",
+    "options": [
+      "A. Transparent Data Encryption (TDE)",
+      "B. SQL Net Encryption",
+      "C. Column-level encryption only",
+      "D. Application-level encryption only"
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "ADB supports both Transparent Data Encryption (TDE) for data at rest and SQL Net Encryption for data in transit."
+  },
+  {
+    "num": 123,
+    "question": "Which two statements about Data Transforms are correct? (Choose two)",
+    "options": [
+      "A. Data Transforms allows you to design data transformations in the form of data loads, dataflows, and workflows.",
+      "B. All capabilities to transform data in ODI Classic are available with ODI Web Edition.",
+      "C. Data Transforms only supports flat file sources.",
+      "D. Workflows are only available in the paid tier."
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "Data Transforms supports loads/flows/workflows AND all ODI Classic capabilities are available in ODI Web Edition."
+  },
+  {
+    "num": 124,
+    "question": "Which two data sources can be used to load data via the Data Load tool? (Choose two)",
+    "options": [
+      "A. Local Files",
+      "B. Files in Oracle Cloud Storage",
+      "C. FTP Servers",
+      "D. SOAP Web Services"
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "The Data Load tool supports loading from Local Files and Oracle Cloud Storage (as well as other cloud object stores)."
+  },
+  {
+    "num": 125,
+    "question": "Which three are Oracle-recommended best practices for ADB alarms? (Choose three)",
+    "options": [
+      "A. Tune your alarms routinely.",
+      "B. Suppress alarms during investigations.",
+      "C. Create a single alarm for each metric.",
+      "D. Select the correct alarm interval for your metric.",
+      "E. Use a single interval for all alarms."
+    ],
+    "answer": "ABD",
+    "multi": true,
+    "explanation": "Oracle recommends: tuning alarms routinely, suppressing alarms during investigations, and selecting the correct alarm interval per metric."
+  },
+  {
+    "num": 126,
+    "question": "What is the correct way to list files in the DATA_PUMP_DIR directory on Autonomous Database?",
+    "options": [
+      "A. Execute SELECT * FROM utl_file.list('DATA_PUMP_DIR');",
+      "B. Execute SELECT * FROM DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR');",
+      "C. Log onto the server and use ls -al on the command line.",
+      "D. Use SQL Developer file browser."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "DBMS_CLOUD.LIST_FILES('DATA_PUMP_DIR') is the correct function \u2014 direct OS access is not available on ADB."
+  },
+  {
+    "num": 127,
+    "question": "Which DBMS_WORKLOAD_REPOSITORY subprogram can be used to modify the default eight-day retention period for Autonomous Database performance data?",
+    "options": [
+      "A. CREATE_BASELINE_TEMPLATE",
+      "B. UPDATE_OBJECT_INFO",
+      "C. MODIFY_BASELINE_WINDOW_SIZE",
+      "D. MODIFY_SNAPSHOT_SETTINGS"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "DBMS_WORKLOAD_REPOSITORY.MODIFY_SNAPSHOT_SETTINGS is used to change AWR retention period and snapshot interval."
+  },
+  {
+    "num": 128,
+    "question": "Which tab in the Data Load Explore tool shows the size of the table and the number of rows and columns?",
+    "options": [
+      "A. Hierarchies tab",
+      "B. Data Sources tab",
+      "C. Statistics tab",
+      "D. Measures tab"
+    ],
+    "answer": "C",
+    "multi": false,
+    "explanation": "The Statistics tab in the Data Load Explore tool shows table size, row count, and column count."
+  },
+  {
+    "num": 129,
+    "question": "Which statement is true about ECPUs and storage when you choose to scale your Autonomous Database?",
+    "options": [
+      "A. ECPUs and storage must remain in sync.",
+      "B. Increasing ECPUs will automatically increase storage.",
+      "C. Use auto scaling to increase storage.",
+      "D. ECPUs and storage can be scaled independently."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "In ADB, ECPUs (compute) and storage are independent resources that can be scaled separately."
+  },
+  {
+    "num": 130,
+    "question": "Which two statements are true regarding active transactions when scaling ECPUs in an Autonomous Database? (Choose two)",
+    "options": [
+      "A. Active transactions are terminated and rolled back.",
+      "B. Active transactions continue running unaffected.",
+      "C. Active transactions in ADW are paused.",
+      "D. Scaling can happen while there are active transactions in the database."
+    ],
+    "answer": "BD",
+    "multi": true,
+    "explanation": "ECPU scaling is online \u2014 active transactions continue unaffected and scaling can occur while transactions are running."
+  },
+  {
+    "num": 131,
+    "question": "What infrastructure does the Autonomous Database run on?",
+    "options": [
+      "A. Bare-metal on Oracle Cloud Infrastructure",
+      "B. VM on Oracle Cloud Infrastructure",
+      "C. Any Oracle Engineered system",
+      "D. Exadata on Oracle Cloud Infrastructure"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Oracle Autonomous Database always runs on Exadata infrastructure on Oracle Cloud Infrastructure."
+  },
+  {
+    "num": 132,
+    "question": "Which statement is correct with respect to moving Oracle ADB resources to a different compartment?",
+    "options": [
+      "A. Moving the ADB also moves the Autonomous Container Database and Autonomous Exadata infrastructure.",
+      "B. Moving an ADB instance does not include its automatic backups.",
+      "C. Autonomous Exadata Infrastructure instances and Autonomous Container Databases have no dependent resources that move with them.",
+      "D. You do not require sufficient access permissions on the target compartment."
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "When moving an ADB to a different compartment, automatic backups are NOT moved \u2014 they remain in the original compartment."
+  },
+  {
+    "num": 133,
+    "question": "How can an Autonomous Database resource be provisioned without logging into the OCI console?",
+    "options": [
+      "A. Use Database Configuration Assistant (DBCA) on the database server.",
+      "B. Connect to the Cloud Infrastructure Command console via SSH wallet.",
+      "C. Use SQL Developer.",
+      "D. Use the Oracle Cloud Infrastructure Command Line Interface tool or REST API calls."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "ADB can be provisioned programmatically via OCI CLI or REST API calls without using the OCI Console."
+  },
+  {
+    "num": 134,
+    "question": "Which is NOT required to connect to Autonomous Database from SQL Developer?",
+    "options": [
+      "A. Database name",
+      "B. Username and password",
+      "C. Wallet file",
+      "D. Service name"
+    ],
+    "answer": "A",
+    "multi": false,
+    "explanation": "SQL Developer requires: Username, Password, Wallet file, and Service name. The database name is not a separate required field."
+  },
+  {
+    "num": 135,
+    "question": "What needs to be done after rotating the regional level Autonomous Database wallet for your tenancy?",
+    "options": [
+      "A. Apply the key to your database backups for the wallet.",
+      "B. Users of the instance must disconnect and reconnect, and change their passwords.",
+      "C. Nothing; database users are not impacted.",
+      "D. Download the new instance or regional wallet, and reconnect."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "After rotating the wallet, users must download the new wallet and reconnect \u2014 the old wallet becomes invalid."
+  },
+  {
+    "num": 136,
+    "question": "Which two OCI resources do you need to create before initiating a manual backup of Oracle Autonomous Database? (Choose two)",
+    "options": [
+      "A. Object Storage Bucket",
+      "B. Auth Token",
+      "C. Storage Gateway",
+      "D. Backup Job",
+      "E. Service Gateway"
+    ],
+    "answer": "AB",
+    "multi": true,
+    "explanation": "Manual backups require: an Object Storage Bucket (to store the backup) and an Auth Token (for authentication to Object Storage)."
+  },
+  {
+    "num": 137,
+    "question": "Where do you find the URL to access APEX Administration Services on your ADB instance?",
+    "options": [
+      "A. In the ADB documentation",
+      "B. SQL Developer",
+      "C. In the database with a SQL query",
+      "D. On the Tools tab and Service Console of the ADB instance"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "The APEX Administration Services URL is found on the Tools tab in the Service Console of the ADB instance."
+  },
+  {
+    "num": 138,
+    "question": "What process is used to generate latitude/longitude information from addresses?",
+    "options": [
+      "A. GeoDefine",
+      "B. GeoRaster",
+      "C. GeoLocation",
+      "D. GeoCoder"
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "Geocoding (GeoCoder) is the process of converting addresses into geographic coordinates (latitude/longitude)."
+  },
+  {
+    "num": 139,
+    "question": "Which two ways can Oracle Database optimally access data in Object Storage? (Choose two)",
+    "options": [
+      "A. Scan avoidance using columnar pruning for .csv files",
+      "B. Optimized data archive using hybrid partitioned tables",
+      "C. Optimized data archive using partitioned external tables",
+      "D. Scan avoidance using partitioned external tables"
+    ],
+    "answer": "BD",
+    "multi": true,
+    "explanation": "Oracle optimizes Object Storage access via hybrid partitioned tables (archive optimization) and partitioned external tables (scan avoidance/pruning)."
+  },
+  {
+    "num": 140,
+    "question": "When cloning from a backup, what is the earliest timestamp of the backup allowed?",
+    "options": [
+      "A. 24 hours",
+      "B. 30 minutes",
+      "C. 1 hour",
+      "D. 2 hours"
+    ],
+    "answer": "B",
+    "multi": false,
+    "explanation": "When cloning from a backup, the backup must be at least 30 minutes old."
+  },
+  {
+    "num": 141,
+    "question": "Which statement is FALSE about Oracle Text?",
+    "options": [
+      "A. It uses standard SQL queries.",
+      "B. It provides indexing, word and theme searches.",
+      "C. It is suited to search document collections.",
+      "D. It requires an Oracle Text license for Autonomous Database."
+    ],
+    "answer": "D",
+    "multi": false,
+    "explanation": "FALSE: Oracle Text is included in Autonomous Database at no extra cost \u2014 no separate license is required."
+  }
+]
